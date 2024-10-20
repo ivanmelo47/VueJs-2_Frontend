@@ -11,8 +11,12 @@ const axiosInstance = axios.create({
 // Configura el interceptor para añadir el token a las cabeceras
 axiosInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
+  const role = localStorage.getItem('role');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
+  }
+  if (role) {
+    config.headers.role = `${role}`;
   }
   return config;
 }, (error) => {

@@ -61,7 +61,7 @@ export default {
         if (response.data.status) {
           // Guardar el token en localStorage
           localStorage.setItem("token", response.data.data.access_token);
-          localStorage.setItem("rol", response.data.data.role ?? "empleado");
+          localStorage.setItem("role", response.data.data.role ?? "empleado");
           localStorage.setItem("nombre", response.data.data.name ?? "Nombre");
           localStorage.setItem(
             "img_url",

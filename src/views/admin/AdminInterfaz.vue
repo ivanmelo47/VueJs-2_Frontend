@@ -535,8 +535,8 @@ export default {
     // URL del servidor
     const serverUrl = process.env.VUE_APP_URL || "http://localhost:8080";
 
-    console.log('URL del servidor:', serverUrl);
-    console.log('URL del API:', apiUrl);
+    //console.log('URL del servidor:', serverUrl);
+    //console.log('URL del API:', apiUrl);
 
     // Cargar el script de la barra lateral cuando el componente se monte
     loadScript(`${serverUrl}/assets/js/main.js`)
@@ -555,7 +555,7 @@ export default {
     // Iniciar el temporizador cuando la vista está montada
     this.resetTimer();
 
-    this.rol = localStorage.getItem("rol").charAt(0).toUpperCase() + localStorage.getItem("rol").slice(1).toLowerCase();
+    this.rol = localStorage.getItem("role").charAt(0).toUpperCase() + localStorage.getItem("role").slice(1).toLowerCase();
     this.nombre = localStorage.getItem("nombre");
     this.img_url = `${apiUrl}/${localStorage.getItem("img_url")}`;
   },

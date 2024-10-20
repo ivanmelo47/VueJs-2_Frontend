@@ -3,7 +3,7 @@ export function isAuthenticated() {
 }
 
 export function getUserRole() {
-  return localStorage.getItem("rol");
+  return localStorage.getItem("role");
 }
 
 export function redirectToDashboard(role) {

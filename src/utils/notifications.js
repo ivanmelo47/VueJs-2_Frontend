@@ -12,3 +12,22 @@ export function showNotification(icon, text) {
     toast: true,
   });
 }
+
+// Función para mostrar notificaciones apiladas con desplazamiento
+export function showNotificationWithOffset(icon, text, index) {
+  Swal.fire({
+    icon: icon,
+    title: "Error",
+    text: text,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    toast: true,
+    customClass: {
+      popup: `swal-toast-${index}`
+    },
+    didOpen: (toast) => {
+      toast.style.marginTop = `${index * 70}px`; // Apilar con un margen de 70px entre cada alerta
+    },
+  });
+}

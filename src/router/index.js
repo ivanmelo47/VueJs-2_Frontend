@@ -8,6 +8,7 @@ import Router from "vue-router";
 import { adminRoutes } from './adminRoutes/adminRoutes';
 import { employeeRoutes } from './employeeRoutes/employeeRoutes';
 import { authRoutes } from './authRoutes/authRoutes';
+import { landingRoutes } from './landingRoutes/landingRoutes';
 
 // Importar los ayudantes de autenticación
 import { isAuthenticated, getUserRole, redirectToDashboard, isRoleAllowed } from './helpers/auth-helpers';
@@ -18,6 +19,7 @@ const routes = [
   ...adminRoutes,
   ...employeeRoutes,
   ...authRoutes,
+  ...landingRoutes,
   // Ruta para capturar todas las rutas no definidas
   {
     path: '*',

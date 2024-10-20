@@ -7,8 +7,8 @@ import './utils/axiosConfig';  // Importa la configuración de Axios con la URL 
 import './assets/css/bootstrap.min.css';
 import './assets/css/lineicons.css';
 import './assets/css/materialdesignicons.min.css';
-import './assets/css/main.css';
-import './assets/css/fullcalendar.css';
+//import './assets/css/main.css';
+//import './assets/css/fullcalendar.css';
 
 // Configuración de la URL del servidor
 const serverUrl = process.env.VUE_APP_URL || "http://localhost:8080";
